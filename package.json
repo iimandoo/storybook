@@ -2,27 +2,24 @@
     "name": "mandoo-storybook",
     "version": "0.3.0",
     "description": "Starter template to get up and running quickly with React and Storybook",
-    "author": {
-        "name": "Chromatic",
-        "email": "https://chromatic.com/"
-    },
+    "main": "dist",
     "type": "module",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/chromaui/intro-storybook-react-template.git"
     },
-    "bugs": {
-        "url": "https://github.com/chromaui/intro-storybook-react-template/issues"
-    },
-    "license": "MIT",
     "private": true,
+    "publishConfig": {
+        "@YOUR-USERNAME:registry": "https://npm.pkg.github.com"
+    },
     "dependencies": {
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
     },
     "scripts": {
         "dev": "vite",
-        "build": "vite build",
+        "build": "rm -rf dist && babel src -d dist --ignore __tests__",
+        "prepublishOnly": "npm run build",
         "preview": "vite preview",
         "storybook": "storybook dev -p 6006",
         "build-storybook": "storybook build",
