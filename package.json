@@ -10,7 +10,7 @@
     },
     "repository": "https://github.com/iimandoo/storybook",
     "publishConfig": {
-        "registry": "https://npm.pkg.github.com"
+        "@iimandoo:registry": "https://npm.pkg.github.com"
     },
     "scripts": {
         "dev": "vite",
