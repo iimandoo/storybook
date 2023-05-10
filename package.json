@@ -14,15 +14,15 @@
     },
     "scripts": {
         "dev": "vite",
-        "build": "storybook build",
+        "build": "storybook build -o dist",
         "prepublishOnly": "npm run build",
         "preview": "vite preview",
         "storybook": "storybook dev -p 6006",
-        "build-storybook": "storybook build",
-        "init-msw": "msw init public/",
-        "chromatic": "npx chromatic --project-token=03f44f5766a6"
+        "build-storybook": "storybook build -o dist",
+        "init-msw": "msw init public/"
     },
     "devDependencies": {
+        "@babel/cli": "^7.21.5",
         "@storybook/addon-essentials": "^7.0.6",
         "@storybook/addon-interactions": "^7.0.6",
         "@storybook/addon-links": "^7.0.6",
@@ -34,14 +34,12 @@
         "@types/react": "^18.0.28",
         "@types/react-dom": "^18.0.11",
         "@vitejs/plugin-react": "^3.1.0",
-        "chromatic": "^6.17.4",
+        "cross-env": "^7.0.3",
         "msw": "^1.2.1",
         "msw-storybook-addon": "^1.8.0",
         "prop-types": "^15.8.1",
         "storybook": "^7.0.6",
         "vite": "^4.2.0"
     },
-    "readme": "ERROR: No README data found!",
-    "homepage": "https://github.com/chromaui/intro-storybook-react-template#readme",
     "_id": "intro-storybook-react-template@0.2.0"
 }
