@@ -14,7 +14,7 @@
     },
     "scripts": {
         "dev": "vite",
-        "build": "rm -rf dist && babel src -d dist --ignore __tests__",
+        "build": "storybook build",
         "prepublishOnly": "npm run build",
         "preview": "vite preview",
         "storybook": "storybook dev -p 6006",
